@@ -16,18 +16,20 @@ end
  
 
 function ShutUpMeg:OnLoad()
-	-- Timer to wait out the 'pick up' sound effect, according to HUDAlerts\HUDAlerts.lua:324
-	local delay = 3.375 + 0.025
-	self.PickUpDelayTimer = ApolloTimer.Create(delay, false, "ShutUp", self)
-	self.PickUpDelayTimer:Stop()
-	
 	Apollo.RegisterEventHandler("DatacubeUpdated", "OnEvent", self)
 end
 
 function ShutUpMeg:OnEvent()
 	Print("Im Eventhandler")
-	self.PickUpDelayTimer:Start()
-	Print("Timer gestartet")
+	if not self.PickUpDelayTimer then
+		-- Timer to wait out the 'pick up' sound effect, according to HUDAlerts\HUDAlerts.lua:324
+		local delay = 3.375 + 0.025
+		self.PickUpDelayTimer = ApolloTimer.Create(delay, false, "ShutUp", self)
+		Print("Timer erzeugt + gestartet")
+	else
+		self.PickUpDelayTimer:Start()
+		Print("Timer gestartet")
+	end	
 end
 
 function ShutUpMeg:ShutUp()
