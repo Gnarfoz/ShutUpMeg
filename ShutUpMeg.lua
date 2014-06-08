@@ -27,9 +27,11 @@ end
 function ShutUpMeg:OnEvent()
 	Print("Im Eventhandler")
 	self.PickUpDelayTimer:Start()
+	Print("Timer gestartet")
 end
 
 function ShutUpMeg:ShutUp()
+	Print("ShutUp-Funktion aufgerufen")
 	DatacubeLib.StopDatacubeSound()
 	Event_FireGenericEvent("GenericEvent_Collections_StopDatacube")
 end
