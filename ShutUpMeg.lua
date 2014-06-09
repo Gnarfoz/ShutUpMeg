@@ -13,7 +13,6 @@ local ShutUpMeg = {}
 function ShutUpMeg:Init()
 	Apollo.RegisterAddon(self, false)
 end
- 
 
 function ShutUpMeg:OnLoad()
 	Apollo.RegisterEventHandler("DatacubeUpdated", "OnEvent", self)
