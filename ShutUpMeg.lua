@@ -21,7 +21,7 @@ end
 function ShutUpMeg:OnEvent()
 	if not self.PickUpDelayTimer then
 		-- Timer to wait out the 'pick up' sound effect, according to HUDAlerts\HUDAlerts.lua:324
-		local delay = 3.375 + 0.001
+		local delay = 3.375 + 0.050
 		self.PickUpDelayTimer = ApolloTimer.Create(delay, false, "ShutUp", self)
 	else
 		self.PickUpDelayTimer:Start()
