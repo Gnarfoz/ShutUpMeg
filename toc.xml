@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Addon Author="Gnarfoz" APIVersion="8" Name="ShutUpMeg" Version="1.1" Description="Stops the auto-playback of datacubes as soon as it starts, effectively disabling it.">
+<Addon Author="Gnarfoz" APIVersion="9" Name="ShutUpMeg" Version="1.2" Description="Stops the auto-playback of datacubes as soon as it starts, effectively disabling it.">
 	<Script Name="ShutUpMeg.lua"/>
 </Addon>
